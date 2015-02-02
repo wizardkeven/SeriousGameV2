@@ -1,0 +1,74 @@
+#:kivy 1.8.0
+
+#First screen of the app
+<Intro>: 
+    button_box: button_input
+    id_box: id_input
+	orientation: "vertical"
+    height: "200dp"
+    size_hint_y: None
+    id_grid: grid_layout
+
+	GridLayout:
+		id: grid_layout
+        cols: 2
+        rows: 1
+        orientation: "vertical"
+        row_default_height: "40dp"
+       
+        spacing: "10dp"
+        padding: "10dp"
+        
+        Label:
+            text: "Identification"
+            color: [1,1,1,1]
+        
+        TextInput:
+        	multiline: False
+        	hint_text: "Tapez votre identifiant"
+        	id: id_input
+
+    Button:
+        id: button_input
+        text: "Login"
+        color: [0,0,0,1]
+        on_press: root.login()
+        
+    Button:
+        id: button_export
+        text: "Export"
+        color: [0,0,0,1]
+        on_press: root.show_export()
+        
+        
+# Code to handle the export dialog box
+<ExportDialog>:
+	
+    text_input: text_input
+
+    BoxLayout:
+        size: root.size
+        pos: root.pos
+        orientation: "vertical"
+        FileChooserListView:
+            id: filechooser
+            on_selection: text_input.text = self.selection and self.selection[0] or ''
+
+        TextInput:
+            id: text_input
+            size_hint_y: None
+            height: 30
+            multiline: False
+
+        BoxLayout:
+            size_hint_y: None
+            height: 30
+            Button:
+                text: "Annuler"
+                on_release: root.cancel()
+
+            Button:
+                text: "Exporter"
+                on_release: root.export(filechooser.path, text_input.text)
+
+        
