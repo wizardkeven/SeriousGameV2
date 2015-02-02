@@ -1,4 +1,4 @@
-SeriousGameV2 is a inproved version of SeriousGame developped by RICM4 of 2013~2014 by Guokai, Sarah et Rame.
+SeriousGameV2 is a inproved version of SeriousGame developped by RICM4 of 2013~2014 by Guokai, Sarah et Rama.
 =============================================================================================================
 Languages : Python + Kivy
 
