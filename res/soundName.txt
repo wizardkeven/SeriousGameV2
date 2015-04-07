@@ -1,0 +1,16 @@
+bear_growl_y.wav
+bird.wav
+bird_caw1.wav
+bird_caw2.wav
+bird_chirp.wav
+bird_chirping2.wav
+bison.wav
+cat_big_x.wav
+cat_kitten.wav
+cat_y.wav
+coyote_howl.wav
+dog_bark_x.wav
+dog_bark3.wav
+dog_bark5.wav
+dog_bark6.wav
+dog_x.wav

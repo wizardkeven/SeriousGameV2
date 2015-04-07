@@ -1,0 +1,142 @@
+#:kivy 1.8
+<SoundGame>:
+	canvas:
+		Rectangle:
+			pos: self.pos
+			size: self.size
+			source:"../res/rainforest.png"
+	Label:
+		size: root.width/8,root.height/6
+        font_size: root.width*1/32
+        x: root.width*7/8
+        y: root.height*5/6
+        text:str(root.score)
+
+    Label:
+		size: root.width/8,root.height/6
+        font_size: root.width*1/32
+        x: root.width*7/8
+        y: root.height*1/60
+        text:str(root.clock)
+
+    Label:
+		size: root.width/8,root.height/6
+        font_size: root.width*1/32
+        x: root.width*7/8
+        y: root.height*4.25/6
+        text: 'Score'
+
+	Button1:
+	    id:bt1
+		size: root.width/7,root.height/6
+        font_size: root.width*1/20
+        x: root.width*3/12
+        y: root.height*1/9
+        text:'play 7'
+        color:(0,0,0,1)
+
+    Button2:
+        id:bt2
+		size: root.width/7,root.height/6
+        font_size: root.width*1/20
+        x: root.width*3/12
+        y: root.height*3.5/9
+        text:'play 4'
+        color:(0,0,0,1)
+
+    Button3:
+        id:bt3
+		size: root.width/7,root.height/6
+        font_size: root.width*1/20
+        x: root.width*3/12
+        y: root.height*6/9
+        text:'play 1'
+        color:(0,0,0,1)
+
+
+    Button4:
+        id:bt4
+		size: root.width/7,root.height/6
+        font_size: root.width*1/20
+        x: root.width*5.5/12
+        y: root.height*1/9
+        text:'play 8'
+        color:(0,0,0,1)
+
+    Button5:
+        id:bt5
+		size: root.width/7,root.height/6
+        font_size: root.width*1/20
+        x: root.width*5.5/12
+        y: root.height*3.5/9
+        text:'play 5'
+        color:(0,0,0,1)
+    Button6:
+        id:bt6
+		size: root.width/7,root.height/6
+        font_size: root.width*1/20
+        x: root.width*5.5/12
+        y: root.height*6/9
+        text:'play 2'
+        color:(0,0,0,1)
+
+    Button7:
+        id:bt7
+		size: root.width/7,root.height/6
+        font_size: root.width*1/20
+        x: root.width*6/9
+        y: root.height*1/9
+        text:'play 9'
+        color:(0,0,0,1)
+
+    Button8:
+        id:bt8
+		size: root.width/7,root.height/6
+        font_size: root.width*1/20
+        x: root.width*6/9
+        y: root.height*3.5/9
+        text:'play 6'
+        color:(0,0,0,1)
+
+    Button9:
+        id:bt9
+		size: root.width/7,root.height/6
+        font_size: root.width*1/20
+        x: root.width*6/9
+        y: root.height*6/9
+        text:'play 3'
+        color:(0,0,0,1)
+
+    Button:
+		size: root.width/8,root.height/20
+        center_x: root.width*1/10
+        center_y: root.height*13/14
+		text: 'Quitter'
+		background_color:  [0.25, 0.25, 0.25, 0.5]
+		bold: True
+		on_press: root.stop()
+
+	Button:
+		size: root.width/8,root.height/20
+        center_x: root.width*1/10
+        center_y: root.height*12/14
+		text: 'Menu'
+		background_color:  [0.25, 0.25, 0.25, 0.5]
+		bold: True
+		on_press: root.menu()
+
+	Button:
+		size: root.width/8,root.height/20
+        center_x: root.width*1/10
+        center_y: root.height*11/14
+		text: 'Aide'
+		background_color:  [0.25, 0.25, 0.25, 0.5]
+		bold: True
+		on_press: root.aide()
+#
+#	Label:
+#		size: root.width/8,root.height/6
+#        font_size: root.width*1/50
+#        x: root.width*7/8
+#        y: root.height*3/40
+#        text:'Temps'
