@@ -1,0 +1,54 @@
+#:kivy 1.8
+		
+
+
+<GameMenu>:
+
+	
+	canvas:
+		Rectangle:
+			pos: self.pos
+			size: self.size
+			source: '../image/Dessins/Ecoutes/bleu.jpg'
+
+	Object:
+		size: root.width/5,root.height/5
+		id: activite1_picture1
+		x: root.width*1/4
+		center_y: root.height*3/6
+		pos_base: [root.width*5/8,root.height*4/6]
+		name: "A1"
+		canvas:
+			Rectangle:
+				pos: self.pos
+				size: self.size
+				source: '../image/Vehicule/accelere.jpg'
+
+
+		
+	
+	Button:
+		size: root.width/8,root.height/20
+        center_x: root.width*1/10
+        center_y: root.height*13/14
+		text: 'Quitter'
+		background_color:  [0.25, 0.25, 0.25, 0.5]
+		bold: True
+		
+	Button:
+		size: root.width/8,root.height/20
+        center_x: root.width*1/10
+        center_y: root.height*12/14
+		text: 'Menu'
+		background_color:  [0.25, 0.25, 0.25, 0.5]
+		bold: True
+		
+	Button:
+		size: root.width/8,root.height/20
+        center_x: root.width*1/10
+        center_y: root.height*11/14
+		text: 'Aide'
+		background_color:  [0.25, 0.25, 0.25, 0.5]
+		bold: True
+        
+        

@@ -1,0 +1,36 @@
+#:kivy 1.8.0
+
+<Menu>:
+    
+	canvas:
+		Rectangle:
+			pos: self.pos
+			size: self.size
+			source: '../image/menu.jpg'
+	Button:
+		size: root.width/3,root.height/10
+        center_x: root.width*5/10
+        center_y: root.height*6/14
+		text: 'Version 1'
+		background_color:  [0.25, 0.25, 0.25, 0.5]
+		bold: True
+		on_press: root.version1()
+		
+	Button:
+		size: root.width/3,root.height/10
+        center_x: root.width*5/10
+        center_y: root.height*4/14
+		text: 'Version 2'
+		background_color:  [0.25, 0.25, 0.25, 0.5]
+		bold: True
+		on_press: root.version2()
+		
+	Button:
+		size: root.width/3,root.height/10
+        center_x: root.width*5/10
+        center_y: root.height*2/14
+		text: 'Aide'
+		background_color:  [0.25, 0.25, 0.25, 0.5]
+		bold: True
+		on_press: root.aide()
+       

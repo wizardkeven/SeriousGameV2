@@ -151,7 +151,7 @@ class Object(Widget):
     
     def collide_customed(self, widget):
         '''
-        Fonction which implement custom collision between 2 widgets
+        Function which implement custom collision between 2 widgets
         This function draw a square with center (self.center_x, self.center_y) and size = ( widget.size - self.size)/2 (1 if res <0)
         :param Widget: the widget to test collision with self
         :type widget = Widget, we will use center_x,center_y and size

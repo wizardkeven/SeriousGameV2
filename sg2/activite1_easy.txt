@@ -1,0 +1,8 @@
+#Declaration of categories
+#Category&link&categoryName
+Sound&../sound/fille.wav&Picture2&choix_video
+Sound&../sound/vitre.wav&Picture1&choix_video
+Sound&../sound/chien.wav&Picture3&choix_video
+Sound&../sound/eau.wav&Picture4&choix_video
+#End of the file
+endfile

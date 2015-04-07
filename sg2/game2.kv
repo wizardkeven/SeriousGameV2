@@ -1,0 +1,378 @@
+#:kivy 1.8.0
+
+# Initialization of the different classes
+
+#Class for Houses	
+<CategoryHouse>:
+	size: 200, 200
+	category: "house"   
+	name: "Cat1"
+	canvas:
+	    Rectangle:
+	        pos: self.pos
+	        size: self.size
+	        source: '../image/Dessins/Habitations/Habitat1.tif'
+
+#Class for Vehicles
+<CategoryVehicle>:
+	size: 200,200
+	category: "vehicle"
+	name: "Cat2"
+	canvas:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: '../image/Dessins/Vehicules/Vehicule4.tif'
+
+#Class for Characters	
+<CategoryCharacter>:
+    size: 200, 200
+    category: "character"
+    name: "Cat3"
+    canvas:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: '../image/Dessins/Personnages/Perso2.tif'
+    		    		
+#Class for all different objects
+<Object>:
+	pos_base: [0,0]
+
+
+
+# List of objects used in the class Game2
+# The following list match the organization of objects
+# A  B  C
+# 1  1  1
+# 2  2  2
+# 3  3  3
+# 4  4  4
+# 5  5  5
+# 6  6  6
+<Game2>:
+	canvas:
+		Rectangle:
+			pos: self.pos
+			size: self.size
+			source: '../image/BackGrounds/jungle.jpg'
+	category_house: cat_house
+	category_vehicle: cat_vehicle
+	category_character: cat_character
+	
+
+	CategoryHouse:
+		size: root.width/4,root.height/3
+		id: cat_house
+		x: root.width*5/8
+		center_y: root.height*5/6
+		
+	CategoryVehicle:
+		size: root.width/4,root.height/3
+		id: cat_vehicle
+		x: root.width*5/8
+		center_y: root.height*3/6
+		
+	CategoryCharacter:
+		size: root.width/4,root.height/3
+		id: cat_character
+		x: root.width*5/8
+		center_y: root.height*1/6
+      
+	#A1 Object
+    Object:
+    	category: "house"
+    	size:root.width/8,root.height/6
+        x: 0
+        center_y: root.height*11/12
+        pos_base: [0,root.height*1/6]
+        name: "A1"
+        canvas:
+	        Rectangle:
+	            pos: self.pos
+	            size: self.size
+	            source: '../image/Dessins/Habitations/Habitat1.tif'
+		text: '../sound/CEstUne/CEstUneDena.wav'
+
+	#A2 Object
+    Object:
+    	category: "character"
+    	size:root.width/8,root.height/6
+        x: 0
+        center_y: root.height*9/12
+        pos_base: [0,root.height*2/6]
+        name: "A2"
+        canvas:
+	        Rectangle:
+	            pos: self.pos
+	            size: self.size
+	            source: '../image/Dessins/Personnages/Perso2.tif'
+		text: '../sound/CEstUne/CEstUneDena.wav'
+		
+	#A3 Object
+    Object:
+    	category: "vehicle"
+    	size:root.width/8,root.height/6
+        x: 0
+        center_y: root.height*7/12
+        pos_base: [0,root.height*3/6]
+        name: "A3"
+        canvas:
+	        Rectangle:
+	            pos: self.pos
+	            size: self.size
+	            source: '../image/Dessins/Vehicules/Vehicule3.tif'
+		text: '../sound/CEstUne/CEstUneDena.wav'      
+		
+	#A4 Object
+    Object:
+    	category: "character"
+    	size:root.width/8,root.height/6
+        x: 0
+        center_y: root.height*5/12
+        pos_base: [0,root.height*2/6]
+        name: "A4"
+        canvas:
+	        Rectangle:
+	            pos: self.pos
+	            size: self.size
+	            source: '../image/Dessins/Personnages/Perso7.tif'
+		text: '../sound/CEstUne/CEstUneDena.wav'
+
+	#A5 Object
+    Object:
+    	category: "house"
+    	size:root.width/8,root.height/6
+        x: 0
+        center_y: root.height*3/12
+        pos_base: [0,root.height*1/6]
+        name: "A5"
+        canvas:
+	        Rectangle:
+	            pos: self.pos
+	            size: self.size
+	            source: '../image/Dessins/Habitations/Habitat3.tif'
+		text: '../sound/CEstUne/CEstUneDena.wav'
+		
+	#A6 Object
+    Object:
+    	category: "house"
+    	size:root.width/8,root.height/6
+        x: 0
+        center_y: root.height*1/12
+        pos_base: [0,0]
+        name: "A6"
+        canvas:
+	        Rectangle:
+	            pos: self.pos
+	            size: self.size
+	            source: '../image/Dessins/Habitations/Habitat8.tif'
+		text: '../sound/CEstUne/CEstUneDena.wav'
+        
+	#B1 Object
+    Object:
+    	category: "character"
+    	size:root.width/8,root.height/6
+        x: root.width*1/8
+        center_y: root.height*11/12
+        pos_base: [root.width*1/8,root.height*5/6]
+        name: "B1"
+        canvas:
+	        Rectangle:
+	            pos: self.pos
+	            size: self.size
+	            source: '../image/Dessins/Personnages/Perso5.tif'
+		text: '../sound/CEstUne/CEstUneDena.wav'
+
+	#B2 Object
+    Object:
+    	category: "vehicle"
+        size:root.width/8,root.height/6
+        x: root.width*1/8
+        center_y: root.height*9/12
+        pos_base: [root.width*1/8,root.height*4/6]
+        name: "B2"
+        canvas:
+	        Rectangle:
+	            pos: self.pos
+	            size: self.size
+	            source: '../image/Dessins/Vehicules/Vehicule3.tif'
+		text: '../sound/CEstUne/CEstUneDena.wav'
+		
+	#B3 Object
+    Object:
+    	category: "character"
+    	size:root.width/8,root.height/6
+        x: root.width*1/8
+        center_y: root.height*7/12
+        pos_base: [root.width*1/8,root.height*3/6]
+        name: "B3"
+        canvas:
+	        Rectangle:
+	            pos: self.pos
+	            size: self.size
+	            source: '../image/Dessins/Personnages/Perso6.tif'
+		text: '../sound/CEstUne/CEstUneDena.wav'      
+		
+	#B4 Object
+    Object:
+    	category: "house"
+    	size:root.width/8,root.height/6
+        x: root.width*1/8
+        center_y: root.height*5/12
+        pos_base: [root.width*1/8 ,root.height*2/6]
+        name: "B4"
+        canvas:
+	        Rectangle:
+	            pos: self.pos
+	            size: self.size
+	            source: '../image/Dessins/Habitations/Habitat5.tif'
+		text: '../sound/CEstUne/CEstUneDena.wav'
+
+	#B5 Object
+    Object:
+    	category: "house"
+    	size:root.width/8,root.height/6
+        x: root.width*1/8
+        center_y: root.height*3/12
+        pos_base: [root.width*1/8 ,root.height*1/6]
+        name: "B5"
+        canvas:
+	        Rectangle:
+	            pos: self.pos
+	            size: self.size
+	            source: '../image/Dessins/Habitations/Habitat3.tif'
+		text: '../sound/CEstUne/CEstUneDena.wav'
+		
+	#B6 Object
+    Object:
+    	category: "house"
+    	size:root.width/8,root.height/6
+        x: root.width*1/8
+        center_y: root.height*1/12
+        pos_base: [root.width*1/8 ,0]
+        name: "B6"
+        canvas:
+	        Rectangle:
+	            pos: self.pos
+	            size: self.size
+	            source: '../image/Dessins/Habitations/Habitat7.tif'
+		text: '../sound/CEstUne/CEstUneDena.wav'
+
+	#C1 Object
+    Object:
+    	category: "vehicle"
+    	size:root.width/8,root.height/6
+        x: root.width*2/8
+        center_y: root.height*11/12
+        pos_base: [root.width*2/8,root.height*5/6]
+        name: "C1"
+        canvas:
+	        Rectangle:
+	            pos: self.pos
+	            size: self.size
+	            source: '../image/Dessins/Vehicules/Vehicule4.tif'
+		text: '../sound/CEstUne/CEstUneDena.wav'
+
+	#C2 Object
+    Object:
+    	category: "house"
+    	size:root.width/8,root.height/6
+        x: root.width*2/8
+        center_y: root.height*9/12
+        pos_base: [root.width*2/8,root.height*4/6]
+        name: "C2"
+        canvas:
+	        Rectangle:
+	            pos: self.pos
+	            size: self.size
+	            source: '../image/Dessins/Habitations/Habitat1.tif'
+		text: '../sound/CEstUne/CEstUneDena.wav'
+		
+	#C3 Object
+    Object:
+    	category: "character"
+    	size:root.width/8,root.height/6
+        x: root.width*2/8
+        center_y: root.height*7/12
+        pos_base: [root.width*2/8,root.height*3/6]
+        name: "C3"
+        canvas:
+	        Rectangle:
+	            pos: self.pos
+	            size: self.size
+	            source: '../image/Dessins/Personnages/Perso2.tif'
+		text: '../sound/CEstUne/CEstUneDena.wav'      
+		
+	#C4 Object
+    Object:
+    	category: "house"
+    	size:root.width/8,root.height/6
+        x: root.width*2/8
+        center_y: root.height*5/12
+        pos_base: [root.width*2/8,root.height*2/6]
+        name: "C4"
+        canvas:
+	        Rectangle:
+	            pos: self.pos
+	            size: self.size
+	            source: '../image/Dessins/Habitations/Habitat1.tif'
+		text: '../sound/CEstUne/CEstUneDena.wav'
+
+	#C5 Object
+    Object:
+    	category: "vehicle"
+    	size:root.width/8,root.height/6
+        x: root.width*2/8
+        center_y: root.height*3/12
+        pos_base: [root.width*2/8,root.height*1/6]
+        name: "C5"
+        canvas:
+	        Rectangle:
+	            pos: self.pos
+	            size: self.size
+	            source: '../image/Dessins/Vehicules/Vehicule4.tif'
+		text: '../sound/CEstUne/CEstUneDena.wav'
+		
+	#C6 Object
+    Object:
+    	category: "vehicle"
+    	size:root.width/8,root.height/6
+        x: root.width*2/8
+        center_y: root.height*1/12
+        pos_base: [root.width*2/8,0]
+        name: "C6"
+        canvas:
+	        Rectangle:
+	            pos: self.pos
+	            size: self.size
+	            source: '../image/Dessins/Vehicules/Vehicule7.tif'
+		text: '../sound/CEstUne/CEstUneDena.wav'
+	
+	Label:
+		size: root.width/8,root.height/6
+        font_size: root.width*1/8  
+        x: root.width*7/8
+        y: root.height*5/6
+        text:str(root.score)
+        
+    Label:
+		size: root.width/8,root.height/6
+        font_size: root.width*1/32
+        x: root.width*7/8
+        y: root.height*4.25/6
+        text: 'Score'
+        
+	Label:
+		size: root.width/8,root.height/6
+        font_size: root.width*1/32  
+        x: root.width*7/8
+        y: root.height*1/40
+        text:str(root.clock)
+        
+	Label:
+		size: root.width/8,root.height/6
+        font_size: root.width*1/50 
+        x: root.width*7/8
+        y: root.height*3/40
+        text:'Temps'

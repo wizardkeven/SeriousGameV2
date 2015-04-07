@@ -1,0 +1,143 @@
+#:kivy 1.8
+		
+
+
+<Activite1_easy>:
+
+	picture1: activite1_picture1
+	picture2: activite1_picture2
+	picture3: activite1_picture3
+	picture4: activite1_picture4
+	
+	canvas:
+		Rectangle:
+			pos: self.pos
+			size: self.size
+			source: '../image/Dessins/Ecoutes/jaune.jpg'
+
+	Picture1:
+		size: root.width/5,root.height/5
+		id: activite1_picture1
+		x: root.width*1/4
+		center_y: root.height*3/6
+		pos_base: [root.width*5/8,root.height*4/6]
+		name: "A1"
+		canvas:
+			Rectangle:
+				pos: self.pos
+				size: self.size
+				source: '../image/Easy/assiettes.jpg'
+
+		
+	Picture2:
+		size:root.width/5,root.height/5
+		id: activite1_picture2
+		x: root.width*2/4
+        center_y: root.height*3/6
+        pos_base: [root.width*5/8,root.height*2/6]
+        name: "A2"
+		canvas:
+			Rectangle:
+				pos: self.pos
+				size: self.size
+				source: '../image/Easy/fille.jpg'
+
+		
+	Picture3:
+		size:root.width/5,root.height/5    
+		id: activite1_picture3
+		x: root.width*3/4
+		center_y: root.height*3/6
+		pos_base: [root.width*1/8,root.height*4/6]
+		name: "A3"
+		canvas:
+			Rectangle:
+				pos: self.pos
+				size: self.size
+				source: '../image/Easy/chien.jpg'
+
+		
+	Picture4:
+		size:root.width/5,root.height/5
+		id: activite1_picture4
+		x: root.width*4/4
+		center_y: root.height*3/6
+		pos_base: [root.width*1/8,root.height*2/6]
+		name: "A4"
+		canvas:
+			Rectangle:
+				pos: self.pos
+				size: self.size
+				source: '../image/Easy/nature.jpg'
+
+		
+	Casque:
+		size:root.width/7,root.height/7
+		x: root.width*4/6
+		center_y: root.height*5/6
+		pos_base: [root.width*1/8,root.height*2/6]
+		canvas:
+			Rectangle:
+				pos: self.pos
+				size: self.size
+				source: '../image/Dessins/Ecoutes/son.jpg'
+
+		
+	Label:
+		size: root.width/8,root.height/6
+        font_size: root.width*1/8  
+        x: root.width*7/8
+        y: root.height*5/6
+        text:str(root.score)
+        
+    Label:
+		size: root.width/8,root.height/6
+        font_size: root.width*1/32
+        x: root.width*7/8
+        y: root.height*4.25/6
+        text: 'Score'
+	
+	Label:
+		size: root.width/8,root.height/6
+        font_size: root.width*1/32  
+        x: root.width*7/8
+        y: root.height*1/40
+        text:str(root.clock)
+        
+	Label:
+		size: root.width/8,root.height/6
+        font_size: root.width*1/50 
+        x: root.width*7/8
+        y: root.height*3/40
+        text:'Temps'	
+		
+
+		
+	Button:
+		size: root.width/8,root.height/20
+        center_x: root.width*1/10
+        center_y: root.height*13/14
+		text: 'Quitter'
+		background_color:  [0.25, 0.25, 0.25, 0.5]
+		bold: True
+		on_press: root.stop()
+		
+	Button:
+		size: root.width/8,root.height/20
+        center_x: root.width*1/10
+        center_y: root.height*12/14
+		text: 'Menu'
+		background_color:  [0.25, 0.25, 0.25, 0.5]
+		bold: True
+		on_press: root.menu()
+		
+	Button:
+		size: root.width/8,root.height/20
+        center_x: root.width*1/10
+        center_y: root.height*11/14
+		text: 'Aide'
+		background_color:  [0.25, 0.25, 0.25, 0.5]
+		bold: True
+		on_press: root.aide()
+        
+        

@@ -1,0 +1,15 @@
+#Declaration of categories
+#Category&link&categoryName
+Sound&../sound/SON/Droite.wav&Porte2&choix_video
+Sound&../sound/SON/Droite2.wav&Porte2&choix_video
+Sound&../sound/SON/Droite3.wav&Porte2&choix_video
+Sound&../sound/SON/Face.wav&Porte1&choix_video
+Sound&../sound/SON/DroiteFace.wav&Porte2&choix_video
+Sound&../sound/SON/Gauche.wav&Porte3&choix_video
+Sound&../sound/SON/Gauche2.wav&Porte3&choix_video
+Sound&../sound/SON/Gauche3.wav&Porte3&choix_video
+Sound&../sound/SON/GaucheFace.wav&Porte1&choix_video
+Sound&../sound/SON/Droite4.wav&Porte2&choix_video
+Sound&../sound/kiss.wav&Porte3&choix_video
+#End of the file
+endfile

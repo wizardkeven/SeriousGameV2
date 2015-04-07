@@ -1,0 +1,8 @@
+#Declaration of categories
+#Category&link&categoryName
+Sound&../sound/piano.wav&Picture1&choix_video
+Sound&../sound/guitare.wav&Picture2&choix_video
+Sound&../sound/flute.wav&Picture3&choix_video
+Sound&../sound/violon.wav&Picture4&choix_video
+#End of the file
+endfile

@@ -1,0 +1,136 @@
+#:kivy 1.8
+
+
+<Activite4>:
+	porte1: activite4_porte1
+	porte2: activite4_porte1
+	porte3: activite4_porte1
+	
+
+	
+	canvas:
+		Rectangle:
+			pos: self.pos
+			size: self.size
+			source: '../image/Dessins/Ecoutes/carrefour.jpg'
+				
+	Bonhomme:
+		size: root.width/10,root.height/5
+		center_x: root.width*1/2
+		center_y: root.height*1/6
+		pos_base: [root.width*1/2,root.height*1/6]
+		canvas:
+			Rectangle:
+				pos: self.pos
+				size: root.width/10,root.height/10
+				source: '../image/Dessins/Ecoutes/mario.png'
+			
+	
+			
+	Porte1:
+		size: root.width/15,root.height/5
+		id: activite4_porte1
+		center_x: root.width*1/2
+		center_y: root.height*5/6
+		name: "Porte1"
+		canvas:
+			Rectangle:
+				pos: self.pos
+				size: self.size
+				source: '../image/Dessins/Ecoutes/porte.jpg'
+				
+	Porte2:
+		size: root.width/15,root.height/5
+		id: activite4_porte2
+		center_x: root.width*6/7
+		center_y: root.height*1/2
+		name: "Porte2"
+		canvas:
+			Rectangle:
+				pos: self.pos
+				size: self.size
+				source: '../image/Dessins/Ecoutes/porteDroite.jpg'
+				
+	Porte3:
+		size: root.width/15,root.height/5
+		id: activite4_porte3
+		center_x: root.width*1/7
+		center_y: root.height*1/2
+		name: "Porte3"
+		canvas:
+			Rectangle:
+				pos: self.pos
+				size: self.size
+				source: '../image/Dessins/Ecoutes/porteGauche.jpg'
+				
+		
+	Casque:
+		size:root.width/8,root.height/8
+		x: root.width*4/6
+		center_y: root.height*5/6
+		pos_base: [root.width*1/8,root.height*2/6]
+		canvas:
+			Rectangle:
+				pos: self.pos
+				size: self.size
+				source: '../image/Dessins/Ecoutes/son.jpg'
+		
+			
+			
+
+
+	Label:
+		size: root.width/8,root.height/6
+        font_size: root.width*1/8  
+        x: root.width*7/8
+        y: root.height*5/6
+        text:str(root.score)
+        
+    Label:
+		size: root.width/8,root.height/6
+        font_size: root.width*1/32
+        x: root.width*7/8
+        y: root.height*4.25/6
+        text: 'Score'
+        
+	Label:
+		size: root.width/8,root.height/6
+        font_size: root.width*1/32  
+        x: root.width*7/8
+        y: root.height*1/40
+        text:str(root.clock)
+        
+	Label:
+		size: root.width/8,root.height/6
+        font_size: root.width*1/50 
+        x: root.width*7/8
+        y: root.height*3/40
+        text:'Temps'
+		
+		
+	Button:
+		size: root.width/8,root.height/20
+        center_x: root.width*1/10
+        center_y: root.height*13/14
+		text: 'Quitter'
+		background_color:  [0.25, 0.25, 0.25, 0.5]
+		bold: True
+		on_press: root.stop()
+		
+	Button:
+		size: root.width/8,root.height/20
+        center_x: root.width*1/10
+        center_y: root.height*12/14
+		text: 'Menu'
+		background_color:  [0.25, 0.25, 0.25, 0.5]
+		bold: True
+		on_press: root.menu()
+		
+	Button:
+		size: root.width/8,root.height/20
+        center_x: root.width*1/10
+        center_y: root.height*11/14
+		text: 'Aide'
+		background_color:  [0.25, 0.25, 0.25, 0.5]
+		bold: True
+		on_press: root.aide()
