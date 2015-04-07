@@ -28,15 +28,15 @@ class Button1(Button):
 
     def on_touch_down(self, touch):
         global sound
-        global music_index
-        music_index = self.parent.Target_Music_list[0]
+        # global music_index
+        self.music_index = self.parent.Target_Music_list[0]
         if self.collide_point(*touch.pos):
-            sound= SoundLoader.load(self.parent.Music_Directory_List[music_index])
+            sound= SoundLoader.load(self.parent.Music_Directory_List[self.music_index])
             sound.play()
 
     def on_touch_up(self, touch):
         global sound
-        global music_index
+        # global music_index
         # global first_play
         sound.stop()
         # print self.first_play
@@ -45,11 +45,11 @@ class Button1(Button):
                 self.first_play = False
             else:
                 print self.parent.Last_Displayed_Music
-                print music_index
+                print self.music_index
                 if self.parent.Last_Displayed_Music == -1:
-                    self.parent.Last_Displayed_Music = music_index
+                    self.parent.Last_Displayed_Music = self.music_index
                 else:
-                    if music_index in self.parent.two_same_music_index_array and self.parent.Last_Displayed_Music in self.parent.two_same_music_index_array:
+                    if self.music_index ==  self.parent.chosen_music_index and self.parent.Last_Displayed_Music ==  self.parent.chosen_music_index:
                         if self.parent.current_niveau == self.parent.NIVEAU[0]  :
                             self.parent.score +=1
                         elif self.parent.current_niveau == self.parent.NIVEAU[1]:
@@ -76,15 +76,15 @@ class Button2(Button):
 
     def on_touch_down(self, touch):
         global sound
-        global music_index
-        music_index = self.parent.Target_Music_list[1]
+        # global music_index
+        self.music_index = self.parent.Target_Music_list[1]
         if self.collide_point(*touch.pos):
-            sound= SoundLoader.load(self.parent.Music_Directory_List[music_index])
+            sound= SoundLoader.load(self.parent.Music_Directory_List[self.music_index])
             sound.play()
 
     def on_touch_up(self, touch):
         global sound
-        global music_index
+        # global music_index
         # global first_play
         sound.stop()
         # print self.first_play
@@ -93,11 +93,11 @@ class Button2(Button):
                 self.first_play = False
             else:
                 print self.parent.Last_Displayed_Music
-                print music_index
+                print self.music_index
                 if self.parent.Last_Displayed_Music == -1:
-                    self.parent.Last_Displayed_Music = music_index
+                    self.parent.Last_Displayed_Music = self.music_index
                 else:
-                    if music_index in self.parent.two_same_music_index_array and self.parent.Last_Displayed_Music in self.parent.two_same_music_index_array:
+                    if self.music_index ==  self.parent.chosen_music_index and self.parent.Last_Displayed_Music ==  self.parent.chosen_music_index:
                         if self.parent.current_niveau == self.parent.NIVEAU[0]  :
                             self.parent.score +=1
                         elif self.parent.current_niveau == self.parent.NIVEAU[1]:
@@ -124,15 +124,15 @@ class Button3(Button):
 
     def on_touch_down(self, touch):
         global sound
-        global music_index
-        music_index = self.parent.Target_Music_list[2]
+        # global music_index
+        self.music_index = self.parent.Target_Music_list[2]
         if self.collide_point(*touch.pos):
-            sound= SoundLoader.load(self.parent.Music_Directory_List[music_index])
+            sound= SoundLoader.load(self.parent.Music_Directory_List[self.music_index])
             sound.play()
 
     def on_touch_up(self, touch):
         global sound
-        global music_index
+        # global music_index
         # global first_play
         sound.stop()
         # print first_play
@@ -141,11 +141,11 @@ class Button3(Button):
                 self.first_play = False
             else:
                 print self.parent.Last_Displayed_Music
-                print music_index
+                print self.music_index
                 if self.parent.Last_Displayed_Music == -1:
-                    self.parent.Last_Displayed_Music = music_index
+                    self.parent.Last_Displayed_Music = self.music_index
                 else:
-                    if music_index in self.parent.two_same_music_index_array and self.parent.Last_Displayed_Music in self.parent.two_same_music_index_array:
+                    if self.music_index ==  self.parent.chosen_music_index and self.parent.Last_Displayed_Music ==  self.parent.chosen_music_index:
                         if self.parent.current_niveau == self.parent.NIVEAU[0]  :
                             self.parent.score +=1
                         elif self.parent.current_niveau == self.parent.NIVEAU[1]:
@@ -170,15 +170,15 @@ class Button4(Button):
 
     def on_touch_down(self, touch):
         global sound
-        global music_index
-        music_index = self.parent.Target_Music_list[3]
+        # global music_index
+        self.music_index = self.parent.Target_Music_list[3]
         if self.collide_point(*touch.pos):
-            sound= SoundLoader.load(self.parent.Music_Directory_List[music_index])
+            sound= SoundLoader.load(self.parent.Music_Directory_List[self.music_index])
             sound.play()
 
     def on_touch_up(self, touch):
         global sound
-        global music_index
+        # global music_index
         # global first_play
         sound.stop()
         # print self.first_play
@@ -187,11 +187,11 @@ class Button4(Button):
                 self.first_play = False
             else:
                 print self.parent.Last_Displayed_Music
-                print music_index
+                print self.music_index
                 if self.parent.Last_Displayed_Music == -1:
-                    self.parent.Last_Displayed_Music = music_index
+                    self.parent.Last_Displayed_Music = self.music_index
                 else:
-                    if music_index in self.parent.two_same_music_index_array and self.parent.Last_Displayed_Music in self.parent.two_same_music_index_array:
+                    if self.music_index ==  self.parent.chosen_music_index and self.parent.Last_Displayed_Music ==  self.parent.chosen_music_index:
                         if self.parent.current_niveau == self.parent.NIVEAU[0]  :
                             self.parent.score +=1
                         elif self.parent.current_niveau == self.parent.NIVEAU[1]:
@@ -217,15 +217,15 @@ class Button5(Button):
 
     def on_touch_down(self, touch):
         global sound
-        global music_index
-        music_index = self.parent.Target_Music_list[4]
+        # global music_index
+        self.music_index = self.parent.Target_Music_list[4]
         if self.collide_point(*touch.pos):
-            sound= SoundLoader.load(self.parent.Music_Directory_List[music_index])
+            sound= SoundLoader.load(self.parent.Music_Directory_List[self.music_index])
             sound.play()
 
     def on_touch_up(self, touch):
         global sound
-        global music_index
+        # global music_index
         # global first_play
         sound.stop()
         # print self.first_play
@@ -234,11 +234,11 @@ class Button5(Button):
                 self.first_play = False
             else:
                 if self.parent.Last_Displayed_Music == -1:
-                    self.parent.Last_Displayed_Music = music_index
+                    self.parent.Last_Displayed_Music = self.music_index
                 else:
                     print self.parent.Last_Displayed_Music
-                    print music_index
-                    if music_index in self.parent.two_same_music_index_array and self.parent.Last_Displayed_Music in self.parent.two_same_music_index_array:
+                    print self.music_index
+                    if self.music_index ==  self.parent.chosen_music_index and self.parent.Last_Displayed_Music ==  self.parent.chosen_music_index:
                         if self.parent.current_niveau == self.parent.NIVEAU[0]  :
                             self.parent.score +=1
                         elif self.parent.current_niveau == self.parent.NIVEAU[1]:
@@ -264,15 +264,15 @@ class Button6(Button):
 
     def on_touch_down(self, touch):
         global sound
-        global music_index
-        music_index = self.parent.Target_Music_list[5]
+        # global music_index
+        self.music_index = self.parent.Target_Music_list[5]
         if self.collide_point(*touch.pos):
-            sound= SoundLoader.load(self.parent.Music_Directory_List[music_index])
+            sound= SoundLoader.load(self.parent.Music_Directory_List[self.music_index])
             sound.play()
 
     def on_touch_up(self, touch):
         global sound
-        global music_index
+        # global music_index
         # global first_play
         sound.stop()
         # print self.first_play
@@ -281,11 +281,11 @@ class Button6(Button):
                 self.first_play = False
             else:
                 print self.parent.Last_Displayed_Music
-                print music_index
+                print self.music_index
                 if self.parent.Last_Displayed_Music == -1:
-                    self.parent.Last_Displayed_Music = music_index
+                    self.parent.Last_Displayed_Music = self.music_index
                 else:
-                    if music_index in self.parent.two_same_music_index_array and self.parent.Last_Displayed_Music in self.parent.two_same_music_index_array:
+                    if self.music_index ==  self.parent.chosen_music_index and self.parent.Last_Displayed_Music ==  self.parent.chosen_music_index:
                         if self.parent.current_niveau == self.parent.NIVEAU[0]  :
                             self.parent.score +=1
                         elif self.parent.current_niveau == self.parent.NIVEAU[1]:
@@ -310,15 +310,15 @@ class Button7(Button):
 
     def on_touch_down(self, touch):
         global sound
-        global music_index
-        music_index = self.parent.Target_Music_list[6]
+        # global music_index
+        self.music_index = self.parent.Target_Music_list[6]
         if self.collide_point(*touch.pos):
-            sound= SoundLoader.load(self.parent.Music_Directory_List[music_index])
+            sound= SoundLoader.load(self.parent.Music_Directory_List[self.music_index])
             sound.play()
 
     def on_touch_up(self, touch):
         global sound
-        global music_index
+        # global music_index
         # global first_play
         sound.stop()
         # print self.first_play
@@ -327,11 +327,11 @@ class Button7(Button):
                 self.first_play = False
             else:
                 print self.parent.Last_Displayed_Music
-                print music_index
+                print self.music_index
                 if self.parent.Last_Displayed_Music == -1:
-                    self.parent.Last_Displayed_Music = music_index
+                    self.parent.Last_Displayed_Music = self.music_index
                 else:
-                    if music_index in self.parent.two_same_music_index_array and self.parent.Last_Displayed_Music in self.parent.two_same_music_index_array:
+                    if self.music_index ==  self.parent.chosen_music_index and self.parent.Last_Displayed_Music ==  self.parent.chosen_music_index:
                         if self.parent.current_niveau == self.parent.NIVEAU[0]  :
                             self.parent.score +=1
                         elif self.parent.current_niveau == self.parent.NIVEAU[1]:
@@ -357,15 +357,15 @@ class Button8(Button):
 
     def on_touch_down(self, touch):
         global sound
-        global music_index
-        music_index = self.parent.Target_Music_list[7]
+        # global music_index
+        self.music_index = self.parent.Target_Music_list[7]
         if self.collide_point(*touch.pos):
-            sound= SoundLoader.load(self.parent.Music_Directory_List[music_index])
+            sound= SoundLoader.load(self.parent.Music_Directory_List[self.music_index])
             sound.play()
 
     def on_touch_up(self, touch):
         global sound
-        global music_index
+        # global music_index
         # global first_play
         sound.stop()
         # print self.first_play
@@ -374,11 +374,11 @@ class Button8(Button):
                 self.first_play = False
             else:
                 print self.parent.Last_Displayed_Music
-                print music_index
+                print self.music_index
                 if self.parent.Last_Displayed_Music == -1:
-                    self.parent.Last_Displayed_Music = music_index
+                    self.parent.Last_Displayed_Music = self.music_index
                 else:
-                    if music_index in self.parent.two_same_music_index_array and self.parent.Last_Displayed_Music in self.parent.two_same_music_index_array:
+                    if self.music_index ==  self.parent.chosen_music_index and self.parent.Last_Displayed_Music ==  self.parent.chosen_music_index:
                         if self.parent.current_niveau == self.parent.NIVEAU[0]  :
                             self.parent.score +=1
                         elif self.parent.current_niveau == self.parent.NIVEAU[1]:
@@ -403,15 +403,15 @@ class Button9(Button):
 
     def on_touch_down(self, touch):
         global sound
-        global music_index
-        music_index = self.parent.Target_Music_list[8]
+        # global music_index
+        self.music_index = self.parent.Target_Music_list[8]
         if self.collide_point(*touch.pos):
-            sound= SoundLoader.load(self.parent.Music_Directory_List[music_index])
+            sound= SoundLoader.load(self.parent.Music_Directory_List[self.music_index])
             sound.play()
 
     def on_touch_up(self, touch):
         global sound
-        global music_index
+        # global music_index
         # global first_play
         sound.stop()
         # print self.first_play
@@ -420,11 +420,11 @@ class Button9(Button):
                 self.first_play = False
             else:
                 print self.parent.Last_Displayed_Music
-                print music_index
+                print self.music_index
                 if self.parent.Last_Displayed_Music == -1:
-                    self.parent.Last_Displayed_Music = music_index
+                    self.parent.Last_Displayed_Music = self.music_index
                 else:
-                    if music_index in self.parent.two_same_music_index_array and self.parent.Last_Displayed_Music in self.parent.two_same_music_index_array:
+                    if self.music_index ==  self.parent.chosen_music_index and self.parent.Last_Displayed_Music ==  self.parent.chosen_music_index:
                         if self.parent.current_niveau == self.parent.NIVEAU[0]  :
                             self.parent.score +=1
                         elif self.parent.current_niveau == self.parent.NIVEAU[1]:
@@ -492,6 +492,7 @@ class SoundGame(Widget):
     Target_Music_list = []  #List to store music displayed in table
     played_music_list = []
     two_same_music_index_array = []
+    chosen_music_index = -1
     Last_Displayed_Music =-1  #List to store
     NIVEAU = ['easy','media','difficult']
     current_niveau = NIVEAU[1]
@@ -535,6 +536,7 @@ class SoundGame(Widget):
         and choose a random button to put in
         """
         target_music_index = random.randint(0,objects_num-2)
+        print self.Target_Music_list
         print target_music_index
         self.two_same_music_index_array.append(target_music_index) # we put the first chosen into the list
         inserted_index = random.randint(0,objects_num-2)
@@ -544,6 +546,9 @@ class SoundGame(Widget):
         print self.current_niveau
         self.two_same_music_index_array.append(inserted_index) # we put the second chosen into the list
         self.Target_Music_list.insert(inserted_index,self.Target_Music_list[inserted_index]) # we insert the chosen music into the target music list
+        print self.Target_Music_list
+        self.chosen_music_index = self.Target_Music_list[inserted_index]
+        print self.chosen_music_index
 
     def increment_clock(self, dt):
         self.clock += 1;
@@ -569,13 +574,16 @@ class SoundGame(Widget):
         layout = BoxLayout(orientation='vertical')
 
         def callback(instance):
-            if (instance.text == 'Rejouer'):
-                return SoundApp().run()
+            if (instance.text == 'Continuer'):
+                popup.dismiss()
+                self.__init__()
+                self.clock = 0
+                # return SoundApp().run()
                 # else:
                 #     return gameMenu.GameMenuApp().run();
                 # print 'The button <%s> is being pressed' % instance.text
 
-        btn1 = Button(text='Rejouer')
+        btn1 = Button(text='Continuer')
         btn1.bind(on_press=callback)
         btn2 = Button(text='Changer de jeu')
         btn2.bind(on_press=callback)
@@ -589,7 +597,7 @@ class SoundGame(Widget):
                       auto_dismiss=False)
         popup.open()
         print("popup ouvert")
-        sound = SoundLoader.load('res/finished.wav')
+        sound = SoundLoader.load('../res/finished.wav')
         sound.play()
 
 
