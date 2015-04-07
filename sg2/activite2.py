@@ -511,13 +511,8 @@ class SoundGame(Widget):
     score = NumericProperty(0)
     clock = NumericProperty(0)
 
-
-    def playMusic(self):
-        print str(self.Music_Directory_List[0])
-        sound = SoundLoader.load(str(self.Music_Directory_List[0]))
-        sound.play()
-
     def new_round(self):
+
         objects_num = 0
         size_Music_List = len(self.Music_Directory_List)
         self.Target_Music_list = []
@@ -525,7 +520,9 @@ class SoundGame(Widget):
             objects_num = 6
         elif self.current_niveau == self.NIVEAU[1]:
             objects_num = 9
-        else:objects_num = 16
+        else:
+            objects_num = 16
+
         object_counter = 0
         while(object_counter< objects_num-1):
             rand = random.randint(0, size_Music_List-1)
@@ -578,10 +575,11 @@ class SoundGame(Widget):
                 popup.dismiss()
                 self.__init__()
                 self.clock = 0
-                # return SoundApp().run()
-                # else:
-                #     return gameMenu.GameMenuApp().run();
-                # print 'The button <%s> is being pressed' % instance.text
+            elif instance.text == 'Changer de jeu':
+                popup.dismiss()
+                self.change_degree()
+
+
 
         btn1 = Button(text='Continuer')
         btn1.bind(on_press=callback)
@@ -599,6 +597,41 @@ class SoundGame(Widget):
         print("popup ouvert")
         sound = SoundLoader.load('../res/finished.wav')
         sound.play()
+
+    def change_degree(self):
+        layout = BoxLayout(orientation='vertical')
+
+        def handle_degree(instance):
+            if instance.text == 'easy':
+                popup.dismiss()
+                self.current_niveau = self.NIVEAU[0]
+                self.__init__()
+            if instance.text == 'medium':
+                popup.dismiss()
+                self.current_niveau = self.NIVEAU[1]
+                self.__init__()
+            if instance.text == 'difficult':
+                popup.dismiss()
+                self.current_niveau = self.NIVEAU[2]
+                self.__init__()
+
+
+        btn1 = Button(text = 'easy')
+        btn1.bind(on_press = handle_degree)
+        btn2 = Button(text = 'medium')
+        btn2.bind(on_press = handle_degree)
+        btn3 = Button(text = 'difficult')
+        btn3.bind(on_press = handle_degree)
+        layout.add_widget(btn1)
+        layout.add_widget(btn2)
+        layout.add_widget(btn3)
+        popup = Popup(title='Choose from below',
+                      title_size='20sp',
+                      content=layout,
+                      size_hint=(None, None),
+                      size=(400, 400),
+                      auto_dismiss=False)
+        popup.open()
 
 
 
